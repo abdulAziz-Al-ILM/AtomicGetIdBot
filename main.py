@@ -3,8 +3,8 @@ from aiogram import Bot, Dispatcher, executor, types
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 # Bot sozlamalari
-API_TOKEN = 'YOUR_BOT_TOKEN'  # Bot tokeningizni bu yerga yozing
-ADMIN_ID = YOUR_ADMIN_ID      # O'zingizning Telegram ID'ingizni (son) bu yerga yozing
+BOT_TOKEN = os.getenv("BOT_TOKEN", "SIZNING_BOT_TOKEN")  # Bot tokeningizni bu yerga yozing
+ADMIN_ID = int(os.getenv("ADMIN_ID", "123456789"))      # O'zingizning Telegram ID'ingizni (son) bu yerga yozing
 
 # Statistikani saqlash uchun sodda usul (ma'lumotlar bot o'chirilganda yo'qoladi)
 # Real loyihalarda ma'lumotlar bazasidan (PostgreSQL/SQLite) foydalanish kerak
