@@ -11,6 +11,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Bot kodini nusxalash
 COPY main.py .
 
+# SQLite ma'lumotlar bazasi uchun /app katalogiga yozish huquqini berish
+RUN chmod -R 777 /app
+
 # Botni ishga tushirish buyrug'i
-# "main.py" faylidagi "start_bot" funksiyasiga mos bo'lishi kerak
 CMD ["python", "main.py"]
